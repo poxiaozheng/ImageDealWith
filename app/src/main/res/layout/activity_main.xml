@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        tools:context=".Activity.MainActivity">
+
+
+    <RelativeLayout android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+        <LinearLayout android:orientation="vertical"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content">
+
+            <com.example.imagedealwith.View.SwipeImageView android:layout_width="match_parent"
+                                                         android:layout_height="420dp"
+                                                         android:scaleType="centerInside"
+                                                         android:src="@drawable/image1"
+                                                         android:id="@+id/WorkPreviewImages"
+            >
+
+            </com.example.imagedealwith.View.SwipeImageView >
+
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                          android:layout_margin="16dp"
+                          android:layout_below="@id/WorkPreviewImages"
+                          android:orientation="vertical">
+
+                <TextView android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:textSize="10pt"
+                          android:id="@+id/WorkName"
+                          android:textAllCaps="false"
+                          android:maxLines="1" android:ellipsize="end" android:text="这是一个很长的作品名称"
+                          android:textColor="#222"
+                />
+
+                <TextView android:layout_width="wrap_content"
+                          android:id="@+id/WorkID"
+                          android:layout_height="wrap_content"
+                          android:textAllCaps="false"
+                          android:text="作品唯一ID..."
+                          android:textColor="#777"
+                          android:textSize="8pt"/>
+            </LinearLayout>
+
+            <RelativeLayout android:layout_width="match_parent"
+                            android:layout_height="64dp"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginEnd="16dp">
+
+                <de.hdodenhof.circleimageview.CircleImageView android:layout_width="48dp"
+                                                              android:id="@+id/ArtistAvatar"
+                                                              android:layout_centerVertical="true"
+                                                              android:layout_height="48dp"
+                                                              android:layout_marginStart="8dp"
+                                                              android:scaleType="centerCrop"
+                                                              android:src="@drawable/image0"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                          android:layout_centerVertical="true"
+                          android:textAllCaps="false"
+                          android:id="@+id/ArtistUserName"
+                          android:text="zoom"
+                          android:layout_marginStart="12dp"
+                          android:layout_toEndOf="@id/ArtistAvatar"
+                          android:textColor="#222"
+                          android:textSize="8pt"/>
+
+                <com.example.imagedealwith.View.MultiStateImageButton
+                        android:id="@+id/LikeWorkButton"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="8dp"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:src="@drawable/favorite_border" android:scaleType="centerCrop"/>
+
+            </RelativeLayout>
+
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                      android:textAllCaps="false" android:layout_margin="16dp"
+                      android:textColor="#222"
+                      android:textSize="8pt"
+                      android:id="@+id/WorkDescriptions"
+                      android:text="我也不知道为什么就画了这幅画，然后写了一个很长很长的描述。我也不知道为什么就画了这幅画，然后写了一个很长很长的描述。我也不知道为什么就画了这幅画，然后写了一个很长很长的描述。我也不知道为什么就画了这幅画，然后写了一个很长很长的描述。我也不知道为什么就画了这幅画，然后写了一个很长很长的描述。我也不知道为什么就画了这幅画，然后写了一个很长很长的描述。我也不知道为什么就画了这幅画，然后写了一个很长很长的描述。我也不知道为什么就画了这幅画，然后写了一个很长很长的描述。我也不知道为什么就画了这幅画，然后写了一个很长很长的描述。"
+            />
+
+            <android.support.v7.widget.RecyclerView android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_marginTop="0dp"
+                                                    android:layout_marginStart="16dp"
+                                                    android:layout_marginEnd="16dp"
+                                                    android:layout_marginBottom="12dp"
+                                                    android:id="@+id/WorkTags"
+            />
+
+        </LinearLayout>
+
+        <ImageButton android:layout_width="48dp"
+                     style="@style/Widget.AppCompat.Button.Borderless"
+                     android:layout_height="48dp"
+                     android:scaleType="centerCrop"
+                     android:src="@drawable/ic_keyboard_arrow_left_blue_grey_200_36dp"/>
+
+    </RelativeLayout>
+
+
+</ScrollView>
